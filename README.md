@@ -1,4 +1,6 @@
-# Day3
+# Complete task
+
+I used json server you will find it in a folder named db
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
 
