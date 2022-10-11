@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "mohamed",
+      "email": "test@test.com",
+      "number": "01145844154",
+      "address": {
+        "city": "alex",
+        "postalCode": 11111,
+        "street": "1 ahmed shawqi"
+      },
+      "password": "123456"
+    },
+    {
+      "name": "TheUnseenShadow",
+      "email": "beado@gmail.com",
+      "number": "01145844154",
+      "address": {
+        "city": "Cairo",
+        "postalCode": 1345,
+        "street": "55 orabi"
+      },
+      "password": "123",
+      "confirm": "123",
+      "id": 2
+    },
+    {
+      "name": "Mohamed",
+      "email": "mohamed.elsayed.1.3.1999@gmail.com",
+      "number": "01234567899",
+      "address": {
+        "city": "Alex",
+        "postalCode": 20186,
+        "street": "Bitash"
+      },
+      "password": "123456",
+      "confirm": "123456",
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "name": "all",
+      "id": 0
+    },
+    {
+      "name": "Labtop",
+      "id": 1
+    },
+    {
+      "name": "Mobile",
+      "id": 2
+    },
+    {
+      "name": "Taplet",
+      "id": 3
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Iphone 14 pro max",
+      "image": "https://placehold.jp/150x150.png",
+      "rating": 4,
+      "price": 1000,
+      "quantity": 10,
+      "categoryId": 2
+    },
+    {
+      "id": 2,
+      "title": "Lenovo legion 7",
+      "image": "https://placehold.jp/150x150.png",
+      "rating": 4,
+      "price": 3000,
+      "quantity": 5,
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "title": "Dell alianware ",
+      "image": "https://placehold.jp/150x150.png",
+      "rating": 3.5,
+      "price": 2500,
+      "quantity": 3,
+      "categoryId": 1
+    },
+    {
+      "title": "Samsung s23 ultra",
+      "price": 1100,
+      "quantity": 5,
+      "rate": 4,
+      "category": 2,
+      "image": "https://placehold.jp/150x150.png",
+      "id": 4
+    },
+    {
+      "id": 6,
+      "title": "Samsung glaxy tap 8",
+      "image": "https://placehold.jp/150x150.png",
+      "rating": 4,
+      "price": 750,
+      "quantity": 5,
+      "categoryId": 3
+    },
+    {
+      "title": "prod1",
+      "price": 200,
+      "quantity": 3,
+      "rating": "3.5",
+      "categoryId": "1",
+      "image": "C:\\fakepath\\Screenshot 2022-09-15 142501.png",
+      "id": 7
+    },
+    {
+      "title": "dadas",
+      "price": 150,
+      "quantity": 20,
+      "rating": "3.5",
+      "categoryId": "2",
+      "image": "C:\\fakepath\\WhatsApp Image 2022-09-18 at 10.27.36 AM (1).jpeg",
+      "id": 8
+    }
+  ]
+}

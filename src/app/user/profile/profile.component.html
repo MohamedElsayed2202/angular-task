@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row justify-content-center align-items-center mt-5">
+        <div class="col-6">
+            <div class="d-flex flex-column justify-content-center align-items-center mb-4">
+                <div class="image-place-holder text-dark d-flex justify-content-center align-items-center">
+                    <p>Image placeholder</p>
+                </div>
+            </div>
+            <div class="text-center mb-4">
+                <h1>{{user.name}}</h1>
+            </div>
+            <div class="text-center mb-4">
+                <h3>{{user.number}}</h3>
+            </div>
+            <div class="text-center mb-4">
+                <h3>Address</h3>
+            </div>
+            <div class="text-center mb-4">
+                <h5>{{user.address.city}}</h5>
+            </div>
+            <div class="text-center mb-4">
+                <h5>{{user.address.postalCode}}</h5>
+            </div>
+            <div class="text-center mb-4">
+                <h5>{{user.address.street}}</h5>
+            </div>
+            <div class="text-center mb-4">
+                <button class="btn btn-info" (click)="edite()">Edit</button>
+            </div>
+        </div>
+    </div>
+</div>

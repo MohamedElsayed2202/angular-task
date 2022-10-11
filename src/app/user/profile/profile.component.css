@@ -1,0 +1,9 @@
+.image-place-holder{
+    width: 250px;
+    height: 250px;
+    background-color: aqua;
+    border-radius: 50%;
+}
+.image-place-holder p{
+    margin-bottom: 0;
+}

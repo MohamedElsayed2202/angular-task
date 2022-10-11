@@ -1,0 +1,21 @@
+
+<div class="row justify-content-sm-center">
+    <div class="col-sm-5">
+        <div class="card" style="width: 100%">
+            <img [src]="product.image" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{product.title}}</h5>
+              <p class="card-text">Rating: {{product.rating}}</p>
+              <p class="card-text">Price: {{product.price | currency}}</p>
+              <p class="card-text">Available qyt: {{product.quantity}}</p>
+                <div class="btn-container">
+                    <button class="btn btn-primary" (click)="deacrease()">Add to cart</button>
+                  <button class="btn btn-warning text-white" (click)="edite()">Edite</button>
+                  <button class="btn btn-danger text-white" (click)="delete()">Delete</button>
+                  <button class="btn btn-info text-white" (click)="back()">Back</button>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+

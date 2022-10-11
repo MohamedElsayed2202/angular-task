@@ -1,0 +1,13 @@
+<div class="card" style="width: 100%"  [ngClass]="{'bg-warning':product.quantity === 1}">
+    <img [src]="product.image" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{product.title}}</h5>
+      <p class="card-text">Rating: {{product.rating}}</p>
+      <p class="card-text">Price: {{+product.price | currency}}</p>
+      <p class="card-text">Available qyt: {{product.quantity}}</p>
+      <div class="btn-container">
+        <button class="btn btn-primary" (click)="deacrease()" [ngClass]="{'disabled': product.quantity === 1}">Add to cart</button>
+      <a [routerLink]="['/product', product.id]" class="btn btn-info text-white">Details</a>
+      </div>
+    </div>
+</div>

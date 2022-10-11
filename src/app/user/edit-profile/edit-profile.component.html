@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <!-- [formGroup]="productForm" (ngSubmit)="edit?updateProduct():addProduct()" -->
+            <form [formGroup]="updateForm" (ngSubmit)="updateUser()" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="name">
+                    <div [hidden]="formControlles['name'].valid || formControlles['name'].untouched">
+                        <p class="invalid-feedback" *ngIf="formControlles['name'].errors?.['required']">Name is required</p>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="number" class="form-label">Mobile number</label>
+                    <input type="tel" class="form-control" id="number" formControlName="number">
+                    <div [hidden]="formControlles['number'].valid || formControlles['number'].untouched">
+                        <p class="text-danger" *ngIf="formControlles['number'].errors?.['required']">Mobile number is
+                            required</p>
+                        <p class="text-danger" *ngIf="formControlles['number'].errors?.['pattern']">Must start with 0
+                            and with length of 11</p>
+                    </div>
+                </div>
+                <div class="mb-3" formGroupName="address">
+                    <div class="mb-3">
+                        <label for="city" class="form-label">City</label>
+                        <input type="text" class="form-control" id="city" formControlName="city">
+                        <div [hidden]="formControlles['address'].get('city')!.valid || formControlles['address'].get('city')!.untouched">
+                            <p class="text-danger" *ngIf="formControlles['address'].get('city')!.errors?.['required']">City is required
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="postalCode" class="form-label">Postal Code</label>
+                        <input type="number" class="form-control" id="postalCode" formControlName="postalCode">
+                        <div [hidden]="formControlles['address'].get('postalCode')!.valid || formControlles['address'].get('postalCode')!.untouched">
+                            <p class="text-danger" *ngIf="formControlles['address'].get('postalCode')!.errors?.['required']">Postal Code is required
+                            </p>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="street" class="form-label">Street</label>
+                        <input type="text" class="form-control" id="street" formControlName="street">
+                        <div [hidden]="formControlles['address'].get('street')!.valid || formControlles['address'].get('street')!.untouched">
+                            <p class="text-danger" *ngIf="formControlles['address'].get('street')!.errors?.['required']">Street is required
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="updateForm.invalid">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

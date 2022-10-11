@@ -1,0 +1,20 @@
+<div class="row justify-content-sm-center">
+    <div class="col-sm-6">
+        <form>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="email" #email>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" #password>
+            </div>
+            <div class="row justify-content-sm-between">
+                <button type="button" class="btn btn-primary col-sm-4" (click)="login(email.value, password.value)">Login</button>
+                <button type="button" class="btn btn-info col-sm-6" (click)="register()">Register</button>
+            </div>
+          </form>
+    </div>
+</div>
+
+

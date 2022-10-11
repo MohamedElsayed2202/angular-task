@@ -1,0 +1,95 @@
+<!-- <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <form (ngSubmit)="edit?updateProduct():addProduct()" #addForm="ngForm">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" [(ngModel)]="product.title" required #name="ngModel">
+                  <div [hidden]="name.valid || name.untouched">
+                    <p class="text-danger" *ngIf="name.errors?.['required']">Name is required</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" name="price" [(ngModel)]="product.price" required #price="ngModel">
+                    <div [hidden]="price.valid || price.untouched">
+                        <p class="text-danger" *ngIf="price.errors?.['required']">Price is required</p>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="product.quantity" required #qty="ngModel">
+                    <div [hidden]="qty.valid || qty.untouched">
+                        <p class="text-danger" *ngIf="qty.errors?.['required']">Quantity is required</p>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="rate" class="form-label">Rate</label>
+                    <input type="text" class="form-control" id="rate" name="rate" [(ngModel)]="product.rating">
+                  </div>
+                  <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="selectCategory" name="category" [(ngModel)]="product.categoryId" required #catId="ngModel">
+                        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+                      </select>
+                      <div [hidden]="catId.valid || catId.untouched">
+                        <p class="text-danger" *ngIf="catId.errors?.['required']">Category is required</p>
+                      </div>
+                  </div>
+                  <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="image" name="image" [(ngModel)] = "product.image">
+                  </div>    
+                <button type="submit" class="btn btn-primary" [disabled]="addForm.invalid">{{edit? 'Update' : 'Submit'}}</button>
+              </form>
+        </div>
+    </div>
+</div> -->
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <form [formGroup]="productForm" (ngSubmit)="edit?updateProduct():addProduct()">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" formControlName="title">
+                    <div [hidden]="formControlles['title'].valid || formControlles['title'].untouched">
+                    <p class="text-danger" *ngIf="formControlles['title'].errors?.['required']">Name is required</p>
+                  </div>
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="number" class="form-control" id="price" formControlName="price">
+                    <div [hidden]="formControlles['price'].valid || formControlles['price'].untouched">
+                        <p class="text-danger" *ngIf="formControlles['price'].errors?.['required']">Price is required</p>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="quantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="quantity" formControlName="quantity">
+                    <div [hidden]="formControlles['quantity'].valid || formControlles['quantity'].untouched">
+                        <p class="text-danger" *ngIf="formControlles['quantity'].errors?.['required']">Quantity is required</p>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="rate" class="form-label">Rate</label>
+                    <input type="text" class="form-control" id="rate" formControlName="rate">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Category</label>
+                    <select class="form-select" id="selectCategory" formControlName="category">
+                        <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+                    </select>
+                    <div [hidden]="formControlles['category'].valid || formControlles['category'].untouched">
+                        <p class="text-danger" *ngIf="formControlles['category'].errors?.['required']">Category is required</p>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="image" formControlName="image">
+                </div>
+                <button type="submit" class="btn btn-primary" [disabled]="productForm.invalid">{{edit? 'Update' : 'Submit'}}</button>
+            </form>
+        </div>
+    </div>
+</div>
